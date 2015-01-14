@@ -21,6 +21,9 @@ DROP TABLE IF EXISTS `bg_article`;
 
 CREATE TABLE `bg_article` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT, /*文章ID*/
+  `title` char(30) NOT NULL, /*文章标题标签*/
+  `keywords` char(60), /*文章关键词标签*/
+  `description` char(120), /*文章描述标签*/
   `content` text NOT NULL, /*文章内容*/
   `sortid` int(11) unsigned NOT NULL, /*文章分类ID*/
   `uid` int(11) unsigned NOT NULL, /*添加文章用户ID*/
@@ -36,6 +39,9 @@ DROP TABLE IF EXISTS `bg_articleupdate`;
 CREATE TABLE `bg_articleupdate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT, /*ID*/
   `articleid` int(11) unsigned NOT NULL, /*文章ID*/
+  `title` char(30) NOT NULL, /*修改前的文章标题标签*/
+  `keywords` char(60), /*修改前的文章关键词标签*/
+  `description` char(120), /*修改前的文章描述标签*/
   `content` text NOT NULL, /*修改前的文章内容*/
   `sortid` int(11) unsigned NOT NULL, /*修改前的文章分类ID*/
   `uid` int(11) unsigned NOT NULL, /*修改记录的用户ID*/
