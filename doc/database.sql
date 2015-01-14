@@ -26,6 +26,8 @@ CREATE TABLE `bg_article` (
   `description` char(120), /*文章描述标签*/
   `content` text NOT NULL, /*文章内容*/
   `sortid` int(11) unsigned NOT NULL, /*文章分类ID*/
+  `status` tinyint(1) DEFAULT '1' NOT NULL, /*显示状态(1:显示,0:不显示)*/
+  `showtime` datetime DEFAULT NULL, /*显示时间*/
   `uid` int(11) unsigned NOT NULL, /*添加文章用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
   `addip` char(15) DEFAULT NULL, /*IP*/
@@ -44,6 +46,8 @@ CREATE TABLE `bg_articleupdate` (
   `description` char(120), /*修改前的文章描述标签*/
   `content` text NOT NULL, /*修改前的文章内容*/
   `sortid` int(11) unsigned NOT NULL, /*修改前的文章分类ID*/
+  `status` tinyint(1) NOT NULL, /*修改前的显示状态*/
+  `showtime` datetime DEFAULT NULL, /*修改前的显示时间*/
   `uid` int(11) unsigned NOT NULL, /*修改记录的用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
   `addip` char(15) DEFAULT NULL, /*IP*/
@@ -59,6 +63,7 @@ CREATE TABLE `bg_sort` (
   `content` char(10) NOT NULL, /*分类名称*/
   `parentid` int(11) unsigned NOT NULL DEFAULT '0', /*分类父ID*/
   `uid` int(11) unsigned NOT NULL, /*添加分类的用户ID*/
+  `status` tinyint(1) DEFAULT '1' NOT NULL, /*显示状态(1:显示,0:不显示)*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
   `addip` char(15) DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
@@ -73,6 +78,7 @@ CREATE TABLE `bg_sortupdate` (
   `sortid` int(11) unsigned NOT NULL, /*分类ID*/
   `content` char(10) NOT NULL, /*修改前的分类名称*/
   `parentid` int(11) unsigned NOT NULL, /*修改前的分类父ID*/
+  `status` tinyint(1) NOT NULL, /*修改前的显示状态*/
   `uid` int(11) unsigned NOT NULL, /*修改记录的用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
   `addip` char(15) DEFAULT NULL, /*IP*/
