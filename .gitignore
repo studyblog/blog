@@ -1,3 +1,4 @@
 ThinkPHP/
 composer.phar
 Application/Runtime/
+Application/Common/Conf/pri.php
