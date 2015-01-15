@@ -61,6 +61,9 @@ DROP TABLE IF EXISTS `bg_sort`;
 CREATE TABLE `bg_sort` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT, /*ID*/
   `content` char(10) NOT NULL, /*分类名称*/
+  `title` char(30) NOT NULL, /*分类标题标签*/
+  `keywords` char(60), /*分类关键词标签*/
+  `description` char(120), /*分类描述标签*/
   `parentid` int(11) unsigned NOT NULL DEFAULT '0', /*分类父ID*/
   `uid` int(11) unsigned NOT NULL, /*添加分类的用户ID*/
   `status` tinyint(1) DEFAULT '1' NOT NULL, /*显示状态(1:显示,0:不显示)*/
@@ -77,6 +80,9 @@ CREATE TABLE `bg_sortupdate` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT, /*ID*/
   `sortid` int(11) unsigned NOT NULL, /*分类ID*/
   `content` char(10) NOT NULL, /*修改前的分类名称*/
+  `title` char(30) NOT NULL, /*修改前的分类标题标签*/
+  `keywords` char(60), /*修改前的分类关键词标签*/
+  `description` char(120), /*修改前的分类描述标签*/
   `parentid` int(11) unsigned NOT NULL, /*修改前的分类父ID*/
   `status` tinyint(1) NOT NULL, /*修改前的显示状态*/
   `uid` int(11) unsigned NOT NULL, /*修改记录的用户ID*/
