@@ -1,6 +1,8 @@
 <?php
 
 $pub = array(
+	'MODULE_ALLOW_LIST'    =>    array('Home','Admin','User'),
+	'DEFAULT_MODULE'       =>    'Home',
 	//'配置项'=>'配置值'
 	'DB_TYPE'			 => 'mysql',
 	'DB_HOST'			 => 'localhost',

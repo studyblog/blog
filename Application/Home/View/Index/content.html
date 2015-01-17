@@ -1,0 +1,174 @@
+<extend name="Public:base" />
+
+<block name="js">
+    <script src="__ASSERTS__/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="__ASSERTS__/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        $(function(){
+            $('.toogle_title').click(function(){
+                $(this).parent().parent().next().toggle()
+            })
+            $('.glyphicon-remove').click(function(){
+                $(this).parent().parent().parent().hide();
+            })
+
+
+
+
+        })
+    </script>
+</block>
+<block name="content">
+    <style>
+        .nav-top {
+            margin-top: 80px;
+        }
+        .title-article h1 {
+            font-size: 32px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .data-article span.day {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: -5px;
+        }
+        span.month, .data-article span.day {
+            text-align: center;
+            display: block;
+        }
+        .data-article {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            left: -20px;
+            top: -20px;
+            color: white;
+            padding-top: 10px;
+
+
+        }
+
+        .panel-zan > .panel-heading {
+            color: white;
+            background-color: #3d4450;
+            border-color: #000;
+        }
+
+    </style>
+
+    <aside class="col-md-8 nav-top well" >
+            <!-- 面包屑 -->
+            <div class="breadcrumb">
+                <i class="fa fa-home"></i> <!-- Breadcrumb NavXT 4.4.0 -->
+                <a title="Go to Zanblog." href="#" class="home">Zanblog</a> / Zanblog 更新至V2.1.0	</div>
+            <!-- 面包屑结束 -->
+
+            <!-- 大型设备文章属性 -->
+            <div class="hidden-xs">
+                <div class="title-article">
+                    <h1><a href="http://www.yeahzan.com/zanblog/archives/856.html">Zanblog 更新至V2.1.0</a></h1>
+                </div>
+                <div class="tag-article container">
+                    <span class="label label-zan"><i class="fa fa-tags"></i> 9-13</span>
+                    <span class="label label-zan"><i class="fa fa-tags"></i> <a href="#" rel="category tag">Zanblog</a></span>
+                    <span class="label label-zan"><i class="fa fa-user"></i> <a href="#" title="由佚站互联发布" rel="author">佚站互联</a></span>
+                    <span class="label label-zan"><i class="fa fa-eye"></i> 4,232</span>
+                </div>
+            </div>
+            <!-- 大型设备文章属性结束 -->
+
+            <!-- 小型设备文章属性 -->
+            <div class="visible-xs">
+                <div class="title-article">
+                    <h4><a href="#l">Zanblog 更新至V2.1.0</a></h4>
+                </div>
+                <p>
+                    <i class="fa fa-calendar"></i> 9-13			<i class="fa fa-eye"></i> 4,232		</p>
+            </div>
+            <!-- 小型设备文章属性结束 -->
+
+            <div class="centent-article">
+                <figure class="thumbnail hidden-xs"><img width="750" height="300" src="__ASSERTS__/img/car_5.jpg" class="attachment-full wp-post-image" alt="car_5"></figure>
+                <div class="alert alert-info">HI，赞友们，在两个月前我们推出了ZanBlog3主题，但还是有一部分用户喜欢Zanblog2的样式，所以在V2.0.7发布8个多月之后，再次更新Zanblog2。<br>
+                    现在让我们一起看看 V2.1.0 所做的变动吧！</div>
+                <div class="alert alert-danger">
+                    注：使用Zanblog2之前版本的用户需要注意，插件、侧边栏、主题选项、页面模版等设置都发生了变化，请仔细阅读问题板块中的文档。<p></p>
+                    <p>在9月14日 23:00之前下载Zanblog2.1.0的用户请重新下载主题包，修复了一些小问题。</p>
+                    <p>同时有用户反映Zanblog的登录功能存在问题，但是由于我们这边测试没有问题，所以不清楚是不是主题确实存在问题，如有问题请留言反馈，我们会尽快修复。
+                    </p></div>
+                <div class="alert alert-danger">必看：下载安装完主题包之后并不代表就可以直接使用，还需要一系列的操作，比如安装<a href="#">插件</a>、设置 在使用过程中，如果遇到问题请仔细查看Zanblog<p></p>
+                </div>
+
+                <p><a href="#" class="btn btn-warning">主题下载</a></p>
+
+                <!-- 分页 -->
+                <div class="zan-page bs-example">
+                    <ul class="pager">
+                        <li class="previous"><a href="#" rel="prev">上一篇</a></li>
+                        <li class="next"><a href="#" rel="prev">下一篇</a></li>
+                    </ul>
+                </div>
+                <!-- 分页 -->
+
+                <!-- 文章版权信息 -->
+                <div class="copyright alert alert-success">
+                    <p>
+                        版权属于:
+                        <a href="#">Zanblog</a>			</p>
+                    <p>
+                        原文地址:
+                        <a href="#">#</a>			</p>
+                    <p>转载时必须以链接形式注明原始出处及本声明。</p>
+                </div>
+                <!-- 文章版权信息结束 -->
+
+                <!-- 文章分享 -->
+                <div class="clearfix" id="bdshare">
+                    <div class="bdsharebuttonbox pull-right bdshare-button-style1-24" data-bd-bind="1421512526057">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    </div>
+                </div>
+                <!-- 文章分享结束 -->
+
+                <script>
+                    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                </script>
+                <!-- Baidu Button END -->
+            </div>
+
+    </aside>
+
+    <aside class="col-md-4 nav-top" id="sidebar">
+
+            <div class="panel panel-zan hot hidden-xs">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-leaf"></i> 最热文章
+                    <span class="pull-right"><i class="glyphicon glyphicon-chevron-down toogle_title"></i> <i class="glyphicon glyphicon-remove"></i></span>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <for start="1" end="10">
+                        <li class="list-group-item">
+              <span class="post-title">
+                <a href="http://www.yeahzan.com/zanblog/archives/763.html" title="Zanblog 2.0.7（稳定版）更新">
+                    Zanblog 2.0.7（稳定版）更新                </a>
+              </span>
+                            <span class="badge">26,918</span>
+                        </li>
+                    </for>
+                </ul>
+            </div>
+
+
+
+
+    </aside>
+
+</block>
