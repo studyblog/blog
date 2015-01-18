@@ -1,7 +1,8 @@
 /*
 MySQL - 5.1.41-community : Database - blog
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -30,7 +31,7 @@ CREATE TABLE `bg_article` (
   `showtime` datetime DEFAULT NULL, /*显示时间*/
   `uid` int(11) unsigned NOT NULL, /*添加文章用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
-  `addip` char(15) DEFAULT NULL, /*IP*/
+  `addip` long DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -50,7 +51,7 @@ CREATE TABLE `bg_articleupdate` (
   `showtime` datetime DEFAULT NULL, /*修改前的显示时间*/
   `uid` int(11) unsigned NOT NULL, /*修改记录的用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
-  `addip` char(15) DEFAULT NULL, /*IP*/
+   `addip` long DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -68,7 +69,7 @@ CREATE TABLE `bg_sort` (
   `uid` int(11) unsigned NOT NULL, /*添加分类的用户ID*/
   `status` tinyint(1) DEFAULT '1' NOT NULL, /*显示状态(1:显示,0:不显示)*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
-  `addip` char(15) DEFAULT NULL, /*IP*/
+  `addip` long DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -87,7 +88,7 @@ CREATE TABLE `bg_sortupdate` (
   `status` tinyint(1) NOT NULL, /*修改前的显示状态*/
   `uid` int(11) unsigned NOT NULL, /*修改记录的用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
-  `addip` char(15) DEFAULT NULL, /*IP*/
+   `addip` long DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -100,7 +101,7 @@ CREATE TABLE `bg_user` (
   `username` char(10) NOT NULL, /*用户名*/
   `password` char(32) NOT NULL, /*密码*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
-  `addip` char(15) DEFAULT NULL, /*IP*/
+   `addip` long DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -112,7 +113,7 @@ CREATE TABLE `bg_userlogin` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT, /*ID*/
   `uid` int(11) unsigned NOT NULL, /*用户ID*/
   `addtime` datetime DEFAULT NULL, /*添加时间*/
-  `addip` char(15) DEFAULT NULL, /*IP*/
+   `addip` long DEFAULT NULL, /*IP*/
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
